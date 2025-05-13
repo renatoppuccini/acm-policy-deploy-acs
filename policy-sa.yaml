@@ -1,0 +1,5 @@
+ind: ServiceAccount
+apiVersion: v1
+metadata:
+  name: policy-sa
+  namespace: acm-policies

@@ -1,0 +1,15 @@
+# ClusterRoleBinding adding the cluster-reader permission  to the serviceAccount policy-sa from the acm-policies namespace
+#change the namespace to where the policy was deployed in your environment
+
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: policy-sa-crb
+subjects:
+  - kind: ServiceAccount
+    name: policy-sa
+    namespace: acm-policies
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-reader
