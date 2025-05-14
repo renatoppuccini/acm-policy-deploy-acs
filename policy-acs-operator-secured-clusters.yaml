@@ -96,7 +96,7 @@ spec:
                   auditLogs:
                     collection: Auto
                   centralEndpoint: |
-                    {{hub (lookup "route.openshift.io/v1" "Route" "stackrox" "central").spec.host hub}}
+                    {{hub (lookup "route.openshift.io/v1" "Route" "stackrox" "central").spec.host hub}}:443
                   admissionControl:
                     listenOnCreates: false
                     listenOnEvents: true
